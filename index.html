@@ -22,14 +22,29 @@
         </nav>
     </header>
     <main>
-        <div class="mainAppointment">
-        <form>
-            <h4>Today is...</h4>
-            <label>Do you want to add an appointment?</label>
-            <input type="text" name="" id="">
-            <input type="text" name="" id="">
+        <div>
+            <h2>ADD AND APPOINTMENT</h2>
+        <form class="form-group" >
+            <input type="text" name="ownerInput" id="ownerInput" placeholder="OWNER">
+            <input type="text" name="dateInput" id="dateInput" placeholder="DATE/HOUR">
         </form>
-            <button type="submit">Add</button>
+        </div>
+        <div class="form-button">
+        <button type="submit" onclick="add()">ADD</button>
+        </div>
+
+        <div class="appointmentsInput" id="appointmentsInput">
+            <!-- <div>
+                <h1>No appointments</h1>
+            </div>
+            <div>
+                <h3>Nombre</h3>
+                <h4>Hora</h4>
+            </div>
+            <div>
+                <button type="submit">EDIT</button>
+                <button type="submit">DELETE</button>
+            </div> -->
         </div>
     </main>
 </body>
