@@ -17,8 +17,8 @@ function add() {
 }
 
 function updateStorage() {
-    localStorage.setItem("Owner", JSON.stringify(appointmentsName));
-    localStorage.setItem("Date/Hour", JSON.stringify(appointmentsDate));
+    localStorage.setItem("appointmentsName", JSON.stringify(appointmentsName));
+    localStorage.setItem("appointmentsDate", JSON.stringify(appointmentsDate));
     showInfo();
 }
 
@@ -34,7 +34,7 @@ function showInfo() {
             divName.innerText = appointmentName;
             div.appendChild(divName);
             appointmentsInput.appendChild(div);
-
+            
             for (const appointmentDate of appointmentsDate){
             const divDate = document.createElement("h4");
             divDate.innerText = appointmentDate;
@@ -47,6 +47,12 @@ function showInfo() {
             btnEdit.innerText = "Edit";
             btnEdit.onclick = () => editInput(appointmentName, appointmentDate);
             divButtons.appendChild(btnEdit);
+            div.appendChild(divButtons);
+
+            const btnDelete = document.createElement("button");
+            btnDelete.innerText = "Delete";
+            btnDelete.onclick = () => deleteInput(appointmentName, appointmentDate);
+            divButtons.appendChild(btnDelete);
             div.appendChild(divButtons);
         }
     }
@@ -61,5 +67,13 @@ function showInfo() {
             const newDate = prompt(`Ingresa la información nueva: $(appointmentDate)`);
             appointmentsName[indexName] = newName;
             appointmentsDate[indexDate] = newDate;
+            updateStorage();
+        }
+
+        function deleteInput(appointmentName, appointmentDate){
+            const indexName = appointmentsName.indexOf(appointmentName);
+            const indexDate = appointmentsDate.indexOf(appointmentDate);
+            appointmentsName.splice(indexName, 1);
+            appointmentsDate.splice(indexDate, 1);
             updateStorage();
         }
