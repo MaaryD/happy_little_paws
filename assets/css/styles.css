@@ -11,7 +11,7 @@ body{
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-rows: 11% 44.5% 44.5%;
+    grid-template-rows: 10% 35% auto;
 }
 
 header{
@@ -89,22 +89,30 @@ button:hover{
 .appointmentsInput{
     justify-self: center;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 40%;
+}
+
+.divInfo{
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     background-color: #EDE5DD;
-    border-radius: 5px;
-    margin-top: 40px;
-    width: 80%;
-    height: 30%;
+    height: 40%;
+    margin-top: 10px;
 }
 
-.appointmentsInput div {
+.divButtons{
+    margin-left: 20px;
+}
+
+div h1{
     display: flex;
     flex-direction: column;
-}
-
-.appointmentsInput div h1{
+    align-items: center;
     font-weight: 400;
     color: #A68160;
 }
@@ -122,7 +130,7 @@ button:hover{
 }
 
 .appointmentsInput div button{
-    padding: 5px 20px;
+    padding: 10px 40px;
     background-color: #A68160;
     color: white;
     font-size: 1rem;
@@ -130,6 +138,7 @@ button:hover{
     font-weight: 300;
     border-radius: 5PX;
     margin-top: 5px;
+    
 }
 
 

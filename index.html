@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -23,29 +25,43 @@
     </header>
     <main>
         <div>
-            <h2>ADD AND APPOINTMENT</h2>
-        <form class="form-group" id="appointmentsInfo">
-            <input type="text" name="owner" id="ownerInput" placeholder="OWNER" required>
-            <input type="text" name="date" id="dateInput" placeholder="DATE/HOUR" required>
-        </form>
+            <h2 class="animate__animated animate__bounce">ADD AND APPOINTMENT</h2>
+            <form class="form-group" id="appointmentsInfo">
+                <input type="text" name="owner" id="ownerInput" placeholder="OWNER" required>
+                <input type="text" name="date" id="dateInput" placeholder="DATE/HOUR" required>
+            </form>
         </div>
         <div class="form-button">
-        <button type="submit" onclick="add()">ADD</button>
+            <button type="submit" onclick="add()">ADD</button>
         </div>
     </main>
-    <div class="appointmentsInput" id="appointmentsInput">
-        <!-- <div>
-            <h1>No appointments</h1>
-        </div> -->
-        <!-- <div>
-            <h3>Nombre</h3>
-            <h4>Hora</h4>
+    <!-- <div>
+        <h1>No appointments</h1>
+    </div> -->
+    <section class="appointmentsInput" id="appointmentsInput">
+        <!-- <div class="divInfo">
+            <div>
+                <h3>Nombre</h3>
+                <h4>Hora</h4>
+            </div>
+            <div class="divButtons">
+                <button type="submit">EDIT</button>
+                <button type="submit">DELETE</button>
+            </div>
         </div>
-        <div>
-            <button type="submit">EDIT</button>
-            <button type="submit">DELETE</button>
+        <div class="divInfo">
+            <div>
+                <h3>Nombre</h3>
+                <h4>Hora</h4>
+            </div>
+            <div class="divButtons">
+                <button type="submit">EDIT</button>
+                <button type="submit">DELETE</button>
+            </div>
+        </div>
         </div> -->
-    </div>
+    </section>
 </body>
 <script src="./assets/js/scripts.js"></script>
+
 </html>
