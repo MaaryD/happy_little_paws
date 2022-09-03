@@ -53,24 +53,45 @@ function showInfo() {
             const btnEdit = document.createElement("button");
             btnEdit.innerText = "Edit";
             btnEdit.classList.add("divButtons");
-            btnEdit.onclick = () => editInput(appointmentsInfo);
+            btnEdit.onclick = () => editInput();
             divButtons.appendChild(btnEdit);
             div.appendChild(divButtons);
 
             const btnDelete = document.createElement("button");
             btnDelete.innerText = "Delete";
             btnDelete.classList.add("divButtons");
-            btnDelete.onclick = () => deleteInput(appointmentName, appointmentDate);
+            btnDelete.onclick = () => deleteInput();
             divButtons.appendChild(btnDelete);
             div.appendChild(divButtons);
         })
     }
 }
 
-function editInput(appointmentsInfo) {
-    const index = appointmentsInfo.indexOf(appointmentName, appointmentDate);
-    const newInfo = prompt("Ingresa la información: " + appointmentsInfo);
-    appointmentsInfo[index] = newInfo;
+function editInput(appointmentName, appointmentDate) {
+    console.log("estoy aquí");
+    const indexName = appointmentsInfo.indexOf(appointmentName);
+    const indexDate = appointmentsInfo.indexOf(appointmentDate);
+
+    const newOwner = prompt(`Ingresa la información nueva: `);
+    const newDate = prompt(`Ingresa la información nueva: `);
+
+    
+
+    // const appointmentsInfo = [{owner, date}];
+    //  appointmentsInfo = appointmentsInfo.map((appointment) =>{
+    //     if (appointment.id === appointment){
+    //         appointment.owner = newOwner;
+    //         appointment.date = newDate;
+    //     }
+    // })
+
+    updateStorage();
+}
+
+function deleteInput(appointmentName, appointmentDate){
+    const indexName = appointmentsInfo.indexOf(appointmentName);
+    const indexDate = appointmentsInfo.indexOf(appointmentDate);
+    appointmentsInfo.splice(indexName && indexDate, 1);
     updateStorage();
 }
 
