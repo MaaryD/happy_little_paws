@@ -1,4 +1,3 @@
-const appointmentsInfo = document.getElementById("appointmentsInfo");
 const ownerInput = document.getElementById("ownerInput");
 const dateInput = document.getElementById("dateInput");
 const appointmentsInput = document.getElementById("appointmentsInput");
@@ -35,26 +34,29 @@ function showInfo() {
             divName.innerText = appointmentName;
             div.appendChild(divName);
             appointmentsInput.appendChild(div);
-        }
-        for (const appointmentDate of appointmentsDate) {
-            const divDate = document.createElement("h4");
-            divDate.innerText = appointmentDate;
-            div.appendChild(divDate);
-            appointmentsInput.appendChild(div);
-        }
-        const divButtons = document.createElement("div");
 
-        const btnEdit = document.createElement("button");
-        btnEdit.innerText = "Edit";
-        btnEdit.onclick = () => editInput(appointmentName, appointmentDate);
-        divButtons.appendChild(btnEdit);
-        div.appendChild(divButtons);
+            for (const appointmentDate of appointmentsDate) {
 
-        const btnDelete = document.createElement("button");
-        btnDelete.innerText = "Delete";
-        btnDelete.onclick = () => deleteInput(appointmentName, appointmentDate);
-        divButtons.appendChild(btnDelete);
-        div.appendChild(divButtons);
+                const divDate = document.createElement("h4");
+                divDate.innerText = appointmentDate;
+                div.appendChild(divDate);
+                appointmentsInput.appendChild(div);
+            
+            const divButtons = document.createElement("div");
+
+            const btnEdit = document.createElement("button");
+            btnEdit.innerText = "Edit";
+            btnEdit.onclick = () => editInput(appointmentName, appointmentDate);
+            divButtons.appendChild(btnEdit);
+            div.appendChild(divButtons);
+
+            const btnDelete = document.createElement("button");
+            btnDelete.innerText = "Delete";
+            btnDelete.onclick = () => deleteInput(appointmentName, appointmentDate);
+            divButtons.appendChild(btnDelete);
+            div.appendChild(divButtons);
+        }
+    }
     }
 }
 
