@@ -83,7 +83,7 @@ function editInput(appointmentName, appointmentDate) {
     //         appointment.owner = newOwner;
     //         appointment.date = newDate;
     //     }
-    // })
+    // }) Sorry, no pude lograrlo
 
     updateStorage();
 }

@@ -46,7 +46,7 @@ main div h2{
     font-weight: 300;
     font-size: 2rem;
     color: #A68160;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
@@ -61,6 +61,7 @@ main div h2{
     background-position: 10px 10px;
     background-repeat: no-repeat;
     background-size: 2rem;
+    margin-top: 10px;
 }
 
 .form-button{
